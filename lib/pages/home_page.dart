@@ -114,16 +114,48 @@ class Homepage extends StatelessWidget {
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.25,
+            height: MediaQuery.of(context).size.height*0.25,
+            alignment: Alignment.bottomLeft,
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(15)),
+            foregroundDecoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+              gradient: LinearGradient(
+                colors: [
+                  Colors.transparent,
+                  Colors.black12,
+                  Colors.black38
+                ],
+                begin: Alignment.center,
+                end: Alignment.bottomCenter,
+                stops: [0.1, 0.7, 0.8],
+              ),
+            ),
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
                 image: DecorationImage(
-                  colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2),BlendMode.dstIn),
                     fit: BoxFit.cover,
-                    image: const NetworkImage(
+                    image: NetworkImage(
                       "https://assets.architecturaldigest.in/photos/60084dd6cce5700439e12bf7/16:9/w_2560%2Cc_limit/modern-living-room-decor-1366x768.jpg",
                     ))),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(color: Colors.black, fontSize: 12),
+                    ),
+                  ),
+                  
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      'Stunning Designs',
+                      style: TextStyle(color: Colors.black, fontSize: 12),
+                    ),
+                  ),
+                ]),
           )
         ],
       ),
