@@ -117,17 +117,17 @@ class Homepage extends StatelessWidget {
             height: MediaQuery.of(context).size.height*0.25,
             alignment: Alignment.bottomLeft,
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            foregroundDecoration: const BoxDecoration(
+            foregroundDecoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
               gradient: LinearGradient(
                 colors: [
                   Colors.transparent,
-                  Colors.black12,
-                  Colors.black38
+                  Colors.black12.withOpacity(0.2),
+                  Colors.black12.withOpacity(0.0)
                 ],
                 begin: Alignment.center,
                 end: Alignment.bottomCenter,
-                stops: [0.1, 0.7, 0.8],
+                stops: const [0.1, 0.8, 0.8],
               ),
             ),
             decoration: const BoxDecoration(
@@ -144,7 +144,7 @@ class Homepage extends StatelessWidget {
                     padding: EdgeInsets.all(10.0),
                     child: Text(
                       'Living Room',
-                      style: TextStyle(color: Colors.black, fontSize: 12),
+                      style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
                   
@@ -152,7 +152,7 @@ class Homepage extends StatelessWidget {
                     padding: EdgeInsets.all(10.0),
                     child: Text(
                       'Stunning Designs',
-                      style: TextStyle(color: Colors.black, fontSize: 12),
+                      style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
                 ]),
