@@ -114,11 +114,11 @@ class Homepage extends StatelessWidget {
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height*0.25,
+            height: MediaQuery.of(context).size.height * 0.25,
             alignment: Alignment.bottomLeft,
             margin: const EdgeInsets.symmetric(horizontal: 20),
             foregroundDecoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: const BorderRadius.all(Radius.circular(15)),
               gradient: LinearGradient(
                 colors: [
                   Colors.transparent,
@@ -147,7 +147,6 @@ class Homepage extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                   ),
-                  
                   Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Text(
