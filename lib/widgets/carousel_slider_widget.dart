@@ -1,3 +1,4 @@
+import 'package:custom_toast_flutter_app/custom_toast/custom_toast_widget.dart';
 import 'package:flutter/material.dart';
 
 class CarouselSliderWidget extends StatefulWidget {
@@ -21,6 +22,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
   void initState() {
     super.initState();
     _pageController = PageController(viewportFraction: 1.0);
+    // showCustomToast(context, 'test', Colors.blueAccent, Colors.white);
   }
 
   @override
