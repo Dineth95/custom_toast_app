@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-void showCustomToast(BuildContext context, String message, Color background,
-    Color textColor) async {
+showCustomToast(BuildContext context, String message, Color background,
+    Color textColor){
   OverlayEntry? overlayEntry;
 
   if(overlayEntry==null){
@@ -35,9 +35,9 @@ void showCustomToast(BuildContext context, String message, Color background,
       ),
     ),
   );
-  Overlay.of(context)!.insert(overlayEntry);
+  Overlay.of(context).insert(overlayEntry);
 
-  Future.delayed(const Duration(seconds: 6), (() {
+  Future.delayed(const Duration(seconds: 4), (() {
     overlayEntry?.remove();
   }));
   }
@@ -75,7 +75,7 @@ class _ToastWidgetState extends State<_ToastAnimatedWidget>
     _forwardController.forward();
     _forwardController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Future.delayed(Duration(seconds: 3), () {
+        Future.delayed(const Duration(seconds: 2), () {
           _forwardController.reverse();
           // }
         });
